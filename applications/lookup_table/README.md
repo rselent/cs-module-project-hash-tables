@@ -6,7 +6,7 @@ future queries.
 The lookup table can be built in advance by iterating over all values in
 the _domain_ of the function and recording the results.
 
-Or, more lazily, can be build as the individual values are passed in.
+Or, more lazily, can be built as the individual values are passed in.
 
 Modify the code in this directory to build a lookup table so that it can
 finish running in under a minute.
