@@ -8,6 +8,7 @@ def word_count(s):
 	charCheck = set( chars).difference( s)
 
 	if len( charCheck) == len( chars):
+		print( len( charCheck), len( chars))
 		return counts
 
 	words = re.sub( '[^A-Za-z0-9 \']+', ' ', s.lower()).split()
@@ -18,18 +19,20 @@ def word_count(s):
 			counts[ word] = 1
 	items = dict( counts.items())
 
+	print( len( charCheck), len( chars))
 	return items
 
 
 if __name__ == "__main__":
+	print( '\n')
 	print(word_count(""))
 	print(word_count("Hello"))
 	print(word_count('Hello, my cat. And my cat doesn\'t say "hello" back.'))
-	print(word_count('This is a test of the emergency broadcast network. This is only a test.'))
+	print(word_count('This is a test of the emergency broadcast network. This is only a test.'), '\n')
 
 	############## TEST FILE ERROR: ##############
 	# INSTRUCTIONS FROM README:
 	# If the input contains no ignored characters, return an empty dictionary.
 	##############					##############
-	print( word_count("Hello    hello"))
-	print( word_count('a a\ra\na\ta \t\r\n'))
+	# print( word_count("Hello    hello"))
+	# print( word_count('a a\ra\na\ta \t\r\n'))
